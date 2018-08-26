@@ -64,6 +64,7 @@
     <Compile Include="Assets\Blocks\Character\BasicMovementRules.cs" />
     <Compile Include="Assets\Blocks\Character\Character.cs" />
     <Compile Include="Assets\Blocks\Character\CharacterIdle.cs" />
+    <Compile Include="Assets\Blocks\Character\Face\Face.cs" />
     <Compile Include="Assets\Blocks\Character\MovementRules.cs" />
     <Compile Include="Assets\Blocks\Character\SpawnCharacter.cs" />
     <Compile Include="Assets\Blocks\Core\ClickTarget.cs" />

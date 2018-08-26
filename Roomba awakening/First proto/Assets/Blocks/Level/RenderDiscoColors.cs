@@ -12,7 +12,7 @@ public class RenderDiscoColors : MonoBehaviour
 	Vector3 basePos;
 
 	private const float FIREWORKS_INTERVAL = 1f;
-	private const float MAX_SHAKE = 0.2f;
+	private const float MAX_SHAKE = 2f;
 	private const float MIN_SCALE = 0.01f;
 	private const float SAFETY = 0.001f;
 

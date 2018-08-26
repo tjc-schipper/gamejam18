@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1115760579317024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 0.048294067, z: 2}
+  m_LocalPosition: {x: -3.1263583, y: -5.984863, z: 3.279583}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -62,7 +62,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 1c5c0077039db284995174bfb5e967c5, type: 2}
+  - {fileID: 2100000, guid: a6c30cf6eb69aad4d88458dc875a8508, type: 2}
   - {fileID: 2100000, guid: 5517922258c19b94fa697a053d86b15b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -75,7 +75,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 2
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridObject: {fileID: 0}
   walkable: 1
+  towerType: 0
 --- !u!114 &114326536899587348
 MonoBehaviour:
   m_ObjectHideFlags: 1

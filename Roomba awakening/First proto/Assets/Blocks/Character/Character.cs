@@ -75,6 +75,15 @@ public class Character : MonoBehaviour
 		this.selfGridObject = GetComponent<GridObject>();
 	}
 
+	void Start()
+	{
+		int facingIndex = (int)this.facing;
+		for (int i = 0; i < this.animators.Length; i++)
+		{
+			this.animators[i].gameObject.SetActive(i == facingIndex);
+		}
+	}
+
 	void Update()
 	{
 		if (Input.GetKeyDown(jumpKey))
@@ -126,7 +135,10 @@ public class Character : MonoBehaviour
 
 	private void DoTurn()
 	{
-		int index = ((int)this.facing + 1) % 4;
+		int index = (int)this.facing;
+		this.animators[index].gameObject.SetActive(false);
+		index = (index + 1) % 4;
+		this.animators[index].gameObject.SetActive(true);
 		this.facing = (Facings)index;
 		this.transform.Rotate(this.transform.up, 90f);
 	}
