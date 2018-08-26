@@ -75,7 +75,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 2
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -115,6 +115,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridObject: {fileID: 0}
   walkable: 1
+  towerType: 0
+  towerColor: 0
 --- !u!114 &114606951809321760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -149,6 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235219f7d531a4e4fad4f243890c6146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip_Drag: {fileID: 8300000, guid: 69115d76981abcf40b22cb75881683ee, type: 3}
+  clip_Snap: {fileID: 8300000, guid: 26957cb98d852504689077cb23ad0c24, type: 3}
   canDrag: 1
 --- !u!114 &114951634097446508
 MonoBehaviour:

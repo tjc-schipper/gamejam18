@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using BlocksGame;
 
 public class DragField : MonoBehaviour
 {
+
+	public delegate void TowerColorEvent(Tower.TowerColor color);
+	public event TowerColorEvent TowerColorChanged;
+
 
 	public Transform refObject
 	{
@@ -77,7 +82,7 @@ public class DragField : MonoBehaviour
 		return true;
 	}
 
-	public bool MoveObject(GridObject t, GridPos pos)
+	public bool AddObject(GridObject t, GridPos pos)
 	{
 		if (!IsValidPos(pos))
 		{
@@ -88,7 +93,26 @@ public class DragField : MonoBehaviour
 			return false;
 
 		this.grid[pos.x, pos.z] = t;
+
+		Tower tower = t.GetComponent<Tower>();
+		if (tower != null)
+		{
+			tower.OnCharacterChanged += Tower_OnCharacterChanged;
+		}
+
+
 		return true;
+	}
+
+	private void Tower_OnCharacterChanged(Tower tower, bool characterOnObject)
+	{
+		if (characterOnObject)
+		{
+			if (this.TowerColorChanged != null)
+			{
+				this.TowerColorChanged(tower.towerColor);
+			}
+		}
 	}
 
 	public bool RemoveObject(GridPos pos)

@@ -61,12 +61,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Blocks\Audio\Soundtrack.cs" />
     <Compile Include="Assets\Blocks\Character\BasicMovementRules.cs" />
     <Compile Include="Assets\Blocks\Character\Character.cs" />
     <Compile Include="Assets\Blocks\Character\CharacterIdle.cs" />
     <Compile Include="Assets\Blocks\Character\Face\Face.cs" />
     <Compile Include="Assets\Blocks\Character\MovementRules.cs" />
     <Compile Include="Assets\Blocks\Character\SpawnCharacter.cs" />
+    <Compile Include="Assets\Blocks\Clouds\Clouds.cs" />
+    <Compile Include="Assets\Blocks\Clouds\FloatingCloud.cs" />
     <Compile Include="Assets\Blocks\Core\ClickTarget.cs" />
     <Compile Include="Assets\Blocks\Core\HelperTypes.cs" />
     <Compile Include="Assets\Blocks\Core\HideOnStart.cs" />

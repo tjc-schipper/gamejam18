@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1115760579317024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1263583, y: -5.984863, z: 3.279583}
+  m_LocalPosition: {x: 0.366683, y: -9.972348, z: 4.655284}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -136,6 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235219f7d531a4e4fad4f243890c6146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip_Drag: {fileID: 8300000, guid: 69115d76981abcf40b22cb75881683ee, type: 3}
+  clip_Snap: {fileID: 8300000, guid: 26957cb98d852504689077cb23ad0c24, type: 3}
   canDrag: 0
 --- !u!114 &114215392278769398
 MonoBehaviour:
@@ -151,6 +153,7 @@ MonoBehaviour:
   gridObject: {fileID: 0}
   walkable: 1
   towerType: 0
+  towerColor: 2
 --- !u!114 &114326536899587348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,7 +191,7 @@ MonoBehaviour:
       localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 1c5c0077039db284995174bfb5e967c5, type: 2}
+    _mat: {fileID: 2100000, guid: a6c30cf6eb69aad4d88458dc875a8508, type: 2}
     manualUV: 1
     textureGroup: -1
   - _indices: 040000000500000006000000050000000700000006000000
@@ -216,7 +219,7 @@ MonoBehaviour:
       localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 1c5c0077039db284995174bfb5e967c5, type: 2}
+    _mat: {fileID: 2100000, guid: a6c30cf6eb69aad4d88458dc875a8508, type: 2}
     manualUV: 1
     textureGroup: -1
   - _indices: 08000000090000000a000000090000000b0000000a000000
@@ -244,7 +247,7 @@ MonoBehaviour:
       localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 1c5c0077039db284995174bfb5e967c5, type: 2}
+    _mat: {fileID: 2100000, guid: a6c30cf6eb69aad4d88458dc875a8508, type: 2}
     manualUV: 1
     textureGroup: -1
   - _indices: 0c0000000d0000000e0000000d0000000f0000000e000000
@@ -272,7 +275,7 @@ MonoBehaviour:
       localPivot: {x: 0, y: 0}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 1c5c0077039db284995174bfb5e967c5, type: 2}
+    _mat: {fileID: 2100000, guid: a6c30cf6eb69aad4d88458dc875a8508, type: 2}
     manualUV: 1
     textureGroup: -1
   - _indices: 100000001100000012000000110000001300000012000000
@@ -328,7 +331,7 @@ MonoBehaviour:
       localPivot: {x: 0.5, y: 0.5}
       localSize: {x: 0, y: 0}
       anchor: 9
-    _mat: {fileID: 2100000, guid: 5517922258c19b94fa697a053d86b15b, type: 2}
+    _mat: {fileID: 2100000, guid: a6c30cf6eb69aad4d88458dc875a8508, type: 2}
     manualUV: 0
     textureGroup: -1
   _sharedIndices:

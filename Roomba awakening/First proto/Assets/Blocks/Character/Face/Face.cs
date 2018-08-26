@@ -43,7 +43,7 @@ public class Face : MonoBehaviour
 		{
 			case Expressions.IDLE:
 				OpenEyes();
-				HiddenMouth();
+				SmileMouth();
 				break;
 			case Expressions.CLOSED:
 				CloseEyes();
@@ -55,7 +55,7 @@ public class Face : MonoBehaviour
 				break;
 			case Expressions.HAPPY:
 				OpenEyes();
-				SmileMouth();
+				OpenMouth();
 				break;
 			case Expressions.SAD:
 				OpenEyes();

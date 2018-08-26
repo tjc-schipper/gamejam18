@@ -9,6 +9,7 @@ public class SpawnCharacter : MonoBehaviour {
 
 	[SerializeField] Tower spawnTower;
 	
+	[HideInInspector]
 	public Character currentCharacter;
 	
 	public void DoSpawn()

@@ -6,7 +6,7 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
 
-	public delegate void CharacterEvent(bool characterOnObject);
+	public delegate void CharacterEvent(Tower self, bool characterOnObject);
 	public event CharacterEvent OnCharacterChanged;
 
 
@@ -22,6 +22,15 @@ public class Tower : MonoBehaviour
 		TUNNEL
 	}
 	public TowerTypes towerType = TowerTypes.STANDARD;
+
+	public enum TowerColor
+	{
+		GREEN = 0,
+		RED,
+		NEUTRAL
+	}
+	public TowerColor towerColor = TowerColor.GREEN;
+	
 
 	private Character characterOnSurface;
 
@@ -52,7 +61,7 @@ public class Tower : MonoBehaviour
 		else
 		{
 			this.characterOnSurface = c;
-			if (this.OnCharacterChanged != null) this.OnCharacterChanged(true);
+			if (this.OnCharacterChanged != null) this.OnCharacterChanged(this, true);
 			return true;
 		}
 	}
@@ -64,11 +73,16 @@ public class Tower : MonoBehaviour
 		else
 		{
 			this.characterOnSurface = null;
-			if (this.OnCharacterChanged != null) this.OnCharacterChanged(false);
+			if (this.OnCharacterChanged != null) this.OnCharacterChanged(this, false);
 			return true;
 		}
 	}
-	
+
+	public bool HasCharacter()
+	{
+		return this.characterOnSurface != null;
+	}
+
 	public bool IsWalkable()
 	{
 		return (this.walkable && this.characterOnSurface == null);

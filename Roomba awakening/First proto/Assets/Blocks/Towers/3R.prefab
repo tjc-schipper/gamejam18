@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1115760579317024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 6}
+  m_LocalPosition: {x: -2.0259, y: -11.503454, z: 0.8686733}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 2
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -127,6 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridObject: {fileID: 0}
   walkable: 1
+  towerType: 0
+  towerColor: 1
 --- !u!114 &114326536899587348
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -417,6 +419,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235219f7d531a4e4fad4f243890c6146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip_Drag: {fileID: 8300000, guid: 69115d76981abcf40b22cb75881683ee, type: 3}
+  clip_Snap: {fileID: 8300000, guid: 26957cb98d852504689077cb23ad0c24, type: 3}
   canDrag: 1
 --- !u!114 &114841456144830818
 MonoBehaviour:

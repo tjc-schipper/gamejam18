@@ -1083,6 +1083,7 @@ MonoBehaviour:
   gridObject: {fileID: 0}
   walkable: 1
   towerType: 1
+  towerColor: 0
 --- !u!114 &114100536352413476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1942,6 +1943,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 235219f7d531a4e4fad4f243890c6146, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip_Drag: {fileID: 8300000, guid: 69115d76981abcf40b22cb75881683ee, type: 3}
+  clip_Snap: {fileID: 8300000, guid: 26957cb98d852504689077cb23ad0c24, type: 3}
   canDrag: 1
 --- !u!114 &114667055411132592
 MonoBehaviour:

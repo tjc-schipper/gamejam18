@@ -9,6 +9,20 @@ using DG.Tweening.Plugins.Core.PathCore;
 public class Character : MonoBehaviour
 {
 
+	#region Audio
+	[SerializeField]
+	AudioClip clip_Dash;
+
+	[SerializeField]
+	AudioClip[] clip_Jump;
+
+	[SerializeField]
+	AudioClip[] clip_Nope;
+
+	#endregion
+
+
+
 	public delegate void AnimationEvent();
 	public event AnimationEvent OnJump;
 	public event AnimationEvent OnLand;
@@ -204,6 +218,9 @@ public class Character : MonoBehaviour
 	{
 		if (target != null)
 		{
+			AudioClip c = this.clip_Jump[Random.Range(0, this.clip_Jump.Length)];
+			AudioSource.PlayClipAtPoint(c, Vector3.zero);
+
 			this.selfGridObject.pos = target.gridObject.pos;
 			StartCoroutine(SetUpJumpAnimation(target, true, hack));
 		}
@@ -214,6 +231,9 @@ public class Character : MonoBehaviour
 	{
 		if (target != null)
 		{
+			AudioClip c = this.clip_Jump[Random.Range(0, this.clip_Jump.Length)];
+			AudioSource.PlayClipAtPoint(c, Vector3.zero);
+
 			this.selfGridObject.pos = target.gridObject.pos;
 			StartCoroutine(SetUpJumpAnimation(target, true));
 		}
@@ -225,17 +245,20 @@ public class Character : MonoBehaviour
 		{
 			this.selfGridObject.pos = target.gridObject.pos;
 			StartCoroutine(SetUpJumpAnimation(target, false));
+			AudioSource.PlayClipAtPoint(clip_Dash, Vector3.zero);
 		}
 	}
 
 	private void DoBump()
 	{
-
+		AudioClip c = this.clip_Nope[Random.Range(0, this.clip_Nope.Length)];
+		AudioSource.PlayClipAtPoint(c, Vector3.zero);
 	}
 
 	private void DoFear()
 	{
-
+		AudioClip c = this.clip_Nope[Random.Range(0, this.clip_Nope.Length)];
+		AudioSource.PlayClipAtPoint(c, Vector3.zero);
 	}
 
 	#endregion

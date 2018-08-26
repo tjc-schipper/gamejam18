@@ -5,6 +5,9 @@ using UnityEngine;
 public class RenderDiscoColors : MonoBehaviour
 {
 
+	[SerializeField]
+	AudioClip[] clip_Explosion;
+
 	private bool effectEnabled = false;
 	public Material discoMaterial;
 
@@ -12,9 +15,11 @@ public class RenderDiscoColors : MonoBehaviour
 	Vector3 basePos;
 
 	private const float FIREWORKS_INTERVAL = 1f;
-	private const float MAX_SHAKE = 2f;
+	private const float MAX_SHAKE = 1f;
 	private const float MIN_SCALE = 0.01f;
 	private const float SAFETY = 0.001f;
+
+	Camera selfCam;
 
 	Coroutine decreaseCR;
 
@@ -23,6 +28,9 @@ public class RenderDiscoColors : MonoBehaviour
 		this.effectEnabled = true;
 		this.basePos = this.transform.position;
 		StartCoroutine(CR_ScreenShakes());
+
+		this.selfCam = gameObject.GetComponent<Camera>();
+		StartCoroutine(CR_DimSky());
 	}
 
 
@@ -46,10 +54,26 @@ public class RenderDiscoColors : MonoBehaviour
 
 	private IEnumerator CR_DecreaseScale()
 	{
+		// Play firework explosion
+		AudioClip c = this.clip_Explosion[Random.Range(0, this.clip_Explosion.Length)];
+		AudioSource.PlayClipAtPoint(c, Vector3.zero);
+
 		shakeScale = MAX_SHAKE;
 		while (shakeScale > MIN_SCALE + SAFETY)
 		{
 			shakeScale = Mathf.Lerp(shakeScale, MIN_SCALE, 0.1f);
+			yield return new WaitForEndOfFrame();
+		}
+	}
+
+	private IEnumerator CR_DimSky()
+	{
+		float timer = 0;
+		float duration = 1f;
+		while (timer < duration)
+		{
+			timer += Time.deltaTime;
+			this.selfCam.backgroundColor = Color.Lerp(Color.white, Color.blue, timer / duration);
 			yield return new WaitForEndOfFrame();
 		}
 	}
