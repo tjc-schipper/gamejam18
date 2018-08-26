@@ -11,6 +11,11 @@ public class GridObject : MonoBehaviour
 
 	public GridPos pos;
 
+	public void SetHeight(int _height)
+	{
+		this.height = _height;
+	}
+
 	public int GetHeight()
 	{
 		return this.height;

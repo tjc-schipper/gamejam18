@@ -276,6 +276,7 @@ MonoBehaviour:
   prefab_Character: {fileID: 1947548882158218, guid: a13b6ef04432bfa458e965f25d1163f9,
     type: 2}
   spawnTower: {fileID: 0}
+  currentCharacter: {fileID: 0}
 --- !u!114 &114966012812828942
 MonoBehaviour:
   m_ObjectHideFlags: 1

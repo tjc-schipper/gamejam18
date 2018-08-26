@@ -9,7 +9,7 @@ public class SpawnCharacter : MonoBehaviour {
 
 	[SerializeField] Tower spawnTower;
 	
-	private Character currentCharacter;
+	public Character currentCharacter;
 	
 	public void DoSpawn()
 	{

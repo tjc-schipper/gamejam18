@@ -55,6 +55,11 @@ public class Character : MonoBehaviour
 	private bool grounded = true;
 
 
+	public int GetCharacterHeight()
+	{
+		return this.selfGridObject.GetHeight();
+	}
+
 	public void SetGrounded(bool g)
 	{
 		this.grounded = g;
@@ -96,6 +101,7 @@ public class Character : MonoBehaviour
 	{
 		this.selfGridObject.pos = pos;
 		this.tower = Root.instance.grid.GetObjectAt(this.selfGridObject.pos).GetComponent<Tower>();
+		this.selfGridObject.SetHeight(this.tower.gridObject.GetHeight());
 
 		Vector3 worldPos;
 		try
@@ -139,6 +145,12 @@ public class Character : MonoBehaviour
 			targetTower.RegisterCharacter(this);
 			this.tower.DeregisterCharacter();
 			this.tower = targetTower;   //FIXME!
+
+			int newHeight = targetTower.gridObject.GetHeight();
+			if (modality == MovementRules.Modalities.JUMP_UP_HACK)
+				newHeight = 3;
+
+			this.selfGridObject.SetHeight(newHeight);
 
 			switch (modality)
 			{

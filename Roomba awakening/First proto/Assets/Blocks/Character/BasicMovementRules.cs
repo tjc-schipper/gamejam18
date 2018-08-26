@@ -21,7 +21,8 @@ public class BasicMovementRules : MovementRules
 			return false;
 		}
 
-		int fromHeight = fromObject.GetHeight();
+		//int fromHeight = fromObject.GetHeight();
+		int fromHeight = Root.instance.spawnCharacter.currentCharacter.GetCharacterHeight();
 		int toHeight = toObject.GetHeight();
 
 		Tower fromTower = fromObject.GetComponent<Tower>();

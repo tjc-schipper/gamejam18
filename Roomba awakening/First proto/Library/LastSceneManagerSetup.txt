@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Blocks/Scenes/L6.unity
+- path: Assets/Blocks/Scenes/L7.unity
   isLoaded: 1
   isActive: 1
