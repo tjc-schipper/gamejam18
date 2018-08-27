@@ -113,6 +113,48 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &248130124
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4625196703577132, guid: 6635ed1004788e5438cc5a85cdbbdc4f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625196703577132, guid: 6635ed1004788e5438cc5a85cdbbdc4f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625196703577132, guid: 6635ed1004788e5438cc5a85cdbbdc4f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 18.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625196703577132, guid: 6635ed1004788e5438cc5a85cdbbdc4f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625196703577132, guid: 6635ed1004788e5438cc5a85cdbbdc4f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625196703577132, guid: 6635ed1004788e5438cc5a85cdbbdc4f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625196703577132, guid: 6635ed1004788e5438cc5a85cdbbdc4f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4625196703577132, guid: 6635ed1004788e5438cc5a85cdbbdc4f, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6635ed1004788e5438cc5a85cdbbdc4f, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &287155574
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +273,6 @@ GameObject:
   - component: {fileID: 922884179}
   - component: {fileID: 922884178}
   - component: {fileID: 922884177}
-  - component: {fileID: 922884176}
   m_Layer: 0
   m_Name: SideCam
   m_TagString: MainCamera
@@ -239,24 +280,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &922884176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114271184452838090, guid: 27ace65323ac5f540b3b729292836c61,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 922884175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ae00882cfd9a0a4aa06feb48017077d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clip_Explosion:
-  - {fileID: 8300000, guid: 33999f354305e1a48b147a77011744b9, type: 3}
-  - {fileID: 8300000, guid: 32263cf14c5b1554aa87208d866d947e, type: 3}
-  - {fileID: 8300000, guid: e18be9691d375bb4a8783241db84579f, type: 3}
-  discoMaterial: {fileID: 2100000, guid: 378962779a24bc143be3e1c5775e9b7a, type: 2}
-  shakeScale: 0.05
 --- !u!81 &922884177
 AudioListener:
   m_ObjectHideFlags: 0

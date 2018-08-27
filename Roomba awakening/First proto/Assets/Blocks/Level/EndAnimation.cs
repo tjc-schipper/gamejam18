@@ -30,7 +30,10 @@ public class EndAnimation : MonoBehaviour
 
 	private void LevelTransition()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		//Scene scene
+		int buildIndex = SceneManager.GetActiveScene().buildIndex;
+		SceneManager.LoadScene(buildIndex + 1);
+		SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(buildIndex + 1));
 	}
 
 	void Update()
